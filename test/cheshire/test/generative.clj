@@ -17,6 +17,11 @@
   [^int a ^long b ^double c ^float d]
   (is (= (first %) (last %))))
 
+(defspec float-test
+  (fn [a] [a a])
+  [^float a]
+  (is (= (first %) (type (last %)))))
+
 (defspec bool-json-encoding
   encode-equality
   [^boolean a]
