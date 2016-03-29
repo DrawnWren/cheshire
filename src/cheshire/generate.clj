@@ -39,7 +39,7 @@
                                      ~g ~(with-meta o {:tag `BigInteger}))
                          BigDecimal (.writeNumber
                                      ~g ~(with-meta o {:tag `BigDecimal}))
-                         Ratio (.writeNumber ~g (double ~o))
+                         Ratio (.writeNumber ~g (float ~o))
                          Short (.writeNumber ~g (int ~o))
                          Byte (.writeNumber ~g (int ~o))]]
     `(let [~g ~jg

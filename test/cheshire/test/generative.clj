@@ -13,8 +13,8 @@
   [x (decode (encode x) true)])
 
 (defspec number-json-encoding
-  (fn [a b c] [[a b c] (decode (encode [a b c]))])
-  [^int a ^long b ^double c]
+  (fn [a b c d] [[a b c d] (decode (encode [a b c d]))])
+  [^int a ^long b ^double c ^float d]
   (is (= (first %) (last %))))
 
 (defspec bool-json-encoding
