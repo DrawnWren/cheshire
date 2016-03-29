@@ -34,12 +34,12 @@
         common-clauses `[Integer (.writeNumber ~g (int ~o))
                          Long (.writeNumber ~g (long ~o))
                          Double (.writeNumber ~g (double ~o))
-                         Float (.writeNumber ~g (double ~o))
+                         Float (.writeNumber ~g (float ~o))
                          BigInteger (.writeNumber
                                      ~g ~(with-meta o {:tag `BigInteger}))
                          BigDecimal (.writeNumber
                                      ~g ~(with-meta o {:tag `BigDecimal}))
-                         Ratio (.writeNumber ~g (float ~o))
+                         Ratio (.writeNumber ~g (double ~o))
                          Short (.writeNumber ~g (int ~o))
                          Byte (.writeNumber ~g (int ~o))]]
     `(let [~g ~jg
