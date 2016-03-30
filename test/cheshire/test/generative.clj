@@ -18,9 +18,9 @@
   (is (= (first %) (last %))))
 
 (defspec float-test
-  (fn [a] [a a])
+  (fn [a] (type a))
   [^float a]
-  (is (= (first %) (type (last %)))))
+  (is (= java.lang.Float %)))
 
 (defspec bool-json-encoding
   encode-equality
